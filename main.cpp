@@ -13,7 +13,7 @@ int main() {
 
 	int dataSet[size]{};  // our dataSet.
 	cout << "\n Enter the population values separated by spaces:\n";
-	for (int i = 0; i < size; i++) cin >> dataSet[i];  // inputing data.
+	for (int i = 0; i < size; i++) cin >> dataSet[i];  // inputting data.
 
 	bubbleSort(dataSet, size);  // sorting for future comfort.
 
@@ -24,6 +24,19 @@ int main() {
 	int k;  // number of rows.
 	cout << "\n Enter number of intervals (k): ";
 	cin >> k;
+
+	// if the number of intervals is bigger than the dataset,
+	// the program still works but it doesn't make sense to have more intervals than data points. 
+	bool eligibleK = (k > 0 && k <= size);
+	if (!eligibleK) {
+		cout << "\n\nInvalid number of intervals. want to continue?\n\n y/n: ";
+		char input{' '};
+		cin >> input;
+		if (input != 'y' && input != 'Y') {
+			cout << "\nprogram exited with code 2";
+			return 1;
+		} 
+	}
 
 	double c = ceil(static_cast<double>(R) / k);  // rounding c.
 
