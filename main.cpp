@@ -52,8 +52,7 @@ int main() {
 	int Fi = 0;  // frequency.
 
 	cout << fixed
-		<< setprecision(
-				3);  // making this table was harder than the algorithm.
+		<< setprecision(3);  // making this table was harder than the algorithm.
 
 	int fiCount[k]{};  // having them stored somewhere so that i can find the
 			   // largest and calculate stuff&thangs.
