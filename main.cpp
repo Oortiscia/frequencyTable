@@ -12,7 +12,8 @@ int main() {
 	cin >> size;  // size of our dataSet array.
 
 	int dataSet[size]{};  // our dataSet.
-	cout << "\n Enter the population values separated by spaces:\n";
+	cout << "\n\n Enter the population values separated by spaces\n";
+	cout << " or enter them one by one:\n\n";
 	for (int i = 0; i < size; i++) cin >> dataSet[i];  // inputting data.
 
 	bubbleSort(dataSet, size);  // sorting for future comfort.
