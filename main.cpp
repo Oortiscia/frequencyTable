@@ -11,16 +11,16 @@ int main() {
 	cout << "\n Enter the size of your data: ";
 	cin >> size;  // size of our dataSet array.
 
-	int dataSet[size]{};  // our dataSet.
+	double dataSet[size]{};  // our dataSet.
 	cout << "\n\n Enter the population values separated by spaces\n";
 	cout << " or enter them one by one:\n\n";
 	for (int i = 0; i < size; i++) cin >> dataSet[i];  // inputting data.
 
 	bubbleSort(dataSet, size);  // sorting for future comfort.
 
-	int min = dataSet[0];
-	int max = dataSet[size - 1];  // index of the last member.
-	int R{max - min};
+	double min = dataSet[0];
+	double max = dataSet[size - 1];  // index of the last member.
+	double R{max - min};
 
 	int k;  // number of rows.
 	cout << "\n Enter number of intervals (k): ";
@@ -39,7 +39,7 @@ int main() {
 		} 
 	}
 
-	double c = ceil(static_cast<double>(R) / k);  // rounding c.
+	double c = ceil(R / k);  // rounding c.
 
 	cout << "\n\n_________________________________________________________________"
 		"\n";
@@ -97,7 +97,6 @@ int main() {
 			<< endl;
 	}
 
-	bubbleSort(fiCount, k);
 	short rowWithMode = fiCount[k - 1];
 
 	cout << " \nTotal data count: " << size << endl;
