@@ -1,6 +1,6 @@
 
 // Bubble sort
-void bubbleSort(int numberList[], int arrSize) {
+void bubbleSort(double numberList[], int arrSize) {
 
 	int temp{0};
 
