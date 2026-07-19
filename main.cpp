@@ -3,20 +3,15 @@
 #include <iostream>
 
 #include "utils/bubbleSort.hpp"
+#include "utils/getDataset.hpp"
 
 using namespace std;
 
 int main() {
-	int size;
-	cout << "\n Enter the size of your data: ";
-	cin >> size;  // size of our dataSet array.
+	vector<double> dataSet = get_dataset();  // our dataSet.
+	int size = static_cast<int>(dataSet.size());
 
-	double dataSet[size]{};  // our dataSet.
-	cout << "\n\n Enter the population values separated by spaces\n";
-	cout << " or enter them one by one:\n\n";
-	for (int i = 0; i < size; i++) cin >> dataSet[i];  // inputting data.
-
-	bubbleSort(dataSet, size);  // sorting for future comfort.
+	bubbleSort(dataSet.data(), size);  // sorting for future comfort.
 
 	double min = dataSet[0];
 	double max = dataSet[size - 1];  // index of the last member.

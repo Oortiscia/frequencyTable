@@ -4,4 +4,4 @@ project(frequencyTable)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_executable(frequencyTable main.cpp utils/bubbleSort.cpp)
+add_executable(frequencyTable main.cpp utils/bubbleSort.cpp utils/getDataset.cpp)
