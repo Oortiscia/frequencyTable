@@ -1,6 +1,7 @@
 #include <cmath>
 #include <iomanip>
 #include <iostream>
+#include <vector>
 
 #include "utils/bubbleSort.hpp"
 #include "utils/getDataset.hpp"
@@ -49,7 +50,7 @@ int main() {
 	cout << fixed
 		<< setprecision(3);  // making this table was harder than the algorithm.
 
-	int fiCount[k]{};  // having them stored somewhere so that i can find the
+	vector<int> fiCount(k, 0);  // having them stored somewhere so that i can find the
 			   // largest and calculate stuff&thangs.
 
 	int LMode{};  // real low limit of the row containing Mode.
