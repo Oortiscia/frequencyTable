@@ -20,12 +20,12 @@ jobs:
     - name: Compile (Linux)
       if: runner.os == 'Linux'
       run: |
-        g++ main.cpp utils/bubbleSort.cpp -o frequencyTable
+        g++ main.cpp utils/bubbleSort.cpp utils/getDataset.cpp -o frequencyTable
 
     - name: Compile (Windows)
       if: runner.os == 'Windows'
       run: |
-        g++ main.cpp utils/bubbleSort.cpp -o frequencyTable.exe
+        g++ main.cpp utils/bubbleSort.cpp utils/getDataset.cpp -o frequencyTable.exe
 
     - uses: actions/upload-artifact@v4
       with:
